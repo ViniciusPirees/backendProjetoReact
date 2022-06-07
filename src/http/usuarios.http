@@ -1,0 +1,57 @@
+@baseURL = http://localhost:4000/api
+@id = 619596aa1ef3ee5198461280
+###
+// GET - Lista todos os usuários
+GET {{baseURL}}/usuarios
+Content-Type: application/json
+
+###
+// GET - Lista apenas um usuário pelo id
+GET {{baseURL}}/usuarios/id/{{id}}
+Content-Type: application/json
+
+###
+// POST - Inclui um novo usuário
+POST {{baseURL}}/usuarios
+Content-Type: application/json
+
+{
+   "nome": "",
+   "email": "",
+   "senha": ""
+}
+### 
+// DELETE - Apaga um usuário através do id informado
+DELETE {{baseURL}}/usuarios/{{id}}
+Content-Type: application/json
+
+###
+// PUT - Altera um usuário pelo ID
+PUT {{baseURL}}/usuarios/{{id}}
+Content-Type: application/json
+
+{
+    "nome": "",
+    "email": "",
+    "senha": "",
+    "ativo": true
+  }
+
+###
+// POST - Efetuar o Login
+POST {{baseURL}}/usuarios/login
+Content-Type: application/json
+
+{
+   "email": "",
+   "senha": ""
+
+}
+
+###
+// GET - Validar o token
+GET {{baseURL}}/usuarios/token
+Content-Type: application/json
+access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjE4YWZhNDU0YjE4YmFkYTY2NmE4NDE0In0sImlhdCI6MTYzNzY5MTk5OCwiZXhwIjoxNjM3NzI3OTk4fQ.mw-plPkz8fagYGn6mXZBthp4bstdPPTnGYHPCnkQrxo
+
+

@@ -1,0 +1,16 @@
+
+@baseURL = http://localhost:4000/api
+@id = 619596aa1ef3ee5198461280
+###
+// POST - Adiciona Filmes
+POST {{baseURL}}/filmes/
+Content-Type: application/json
+
+{
+   "genero": "",
+   "nome": "",
+   "diretor": "",
+   "ano": "",
+   "nota": "",
+   "user_id": ""
+}
