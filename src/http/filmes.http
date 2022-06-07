@@ -14,3 +14,22 @@ Content-Type: application/json
    "nota": "",
    "user_id": ""
 }
+
+
+### 
+// DELETE - Apaga um filme através do id informado
+DELETE {{baseURL}}/filmes/{{nome}}
+Content-Type: application/json
+
+###
+// PUT - Altera um filme pelo nome
+PUT {{baseURL}}/filmes/{{nome}}
+Content-Type: application/json
+
+{
+    "nome": "",
+    "email": "",
+    "senha": "",
+    "ativo": true
+  }
+
